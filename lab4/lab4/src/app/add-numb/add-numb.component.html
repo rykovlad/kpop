@@ -1,0 +1,18 @@
+<table>
+    <tbody>
+        <tr>
+            <th>Число</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let num of numbers; index as i">
+            <th><input type="number" [(ngModel)]="num.value"></th>
+            <th>
+                <button class="remove-btn" (click)="deleteNumber(i)">del</button>
+            </th>
+        </tr>
+    </tbody>
+    <tfoot>
+        <button class="add-btn" (click)="addNumber()">add</button>
+    </tfoot>
+</table>
+<app-calc [numberArray]="numbers"></app-calc>
