@@ -1,0 +1,27 @@
+{
+    "/search": {
+        "target": "https://www.metaweather.com/api/location/search/",
+        "secure": true,
+        "pathRewrite": {
+            "^/search": ""
+        },
+        "changeOrigin": true
+    },
+    "/weather": {
+        "target": "https://www.metaweather.com/api/location/",
+        "secure": true,
+        "pathRewrite": {
+            "^/weather": ""
+        },
+        "changeOrigin": true
+    },
+    "/static": {
+        "target": "https://www.metaweather.com/static/img/weather/",
+        "secure": true,
+        "pathRewrite": {
+            "^/static": ""
+        },
+        "changeOrigin": true
+    }
+
+}

@@ -1,0 +1,5 @@
+<mat-grid-list [cols]="res.consolidated_weather.length" >
+    <mat-grid-tile *ngFor="let weather of res.consolidated_weather">
+        <app-day-weather [weather]="weather"></app-day-weather>
+    </mat-grid-tile>
+</mat-grid-list>
