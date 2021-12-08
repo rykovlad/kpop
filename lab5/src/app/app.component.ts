@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   constructor(private appService: AppService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    console.log("allllllllllllllllllllllooooooooooooooooooo")
+    console.log("its working... mb")
 
     this.appService.getUsers().subscribe(x => {
       console.dir(x)

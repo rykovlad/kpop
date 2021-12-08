@@ -1,0 +1,8 @@
+{
+  "name": "voters",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,70 @@
+<style>
+
+</style>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tasks
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" style="background-color: rgb(29, 73, 31);" >
+    <ion-toolbar>
+      <ion-title size="large" >Voters</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-list >
+  <ion-grid>
+    <ion-row style="background-color: rgb(103, 139, 98); text-align: center">
+      <ion-col>
+        Favorite
+      </ion-col>
+      <ion-col>
+        UserID
+      </ion-col>
+      <ion-col>
+        Id
+      </ion-col>
+      <ion-col>
+        Title
+      </ion-col>
+      <ion-col>
+        Completed
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item *ngFor="let task of tasks">
+    <ion-grid>
+      <ion-row style="background-color: rgb(240, 240, 240); text-align: center">
+        <ion-col>
+          <ion-item >
+            <ion-checkbox *ngIf="!favorite(task)" checked='false' (click)="onCheckboxChange($event, task)" slot="start"></ion-checkbox>
+            <ion-checkbox *ngIf="favorite(task)" checked='true' (click)="onCheckboxChange($event, task)" slot="start"></ion-checkbox>
+          </ion-item>
+          
+         
+        </ion-col>
+
+        <ion-col (click)="showFullInfo(task.id)">
+          {{task.userId}}
+        </ion-col>
+
+        <ion-col (click)="showFullInfo(task.id)">
+          {{task.id}}
+        </ion-col>
+
+        <ion-col (click)="showFullInfo(task.id)">
+          {{task.title}}
+        </ion-col>
+
+        <ion-col (click)="showFullInfo(task.id)">
+          {{task.completed}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-list>
+</ion-content>

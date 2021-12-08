@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Lab5": {
+    "lab7": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Lab5",
+            "outputPath": "dist/lab7",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,16 +67,12 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "your-application-name:build",
-            "proxyConfig": "proxy.conf.json"
-          },
           "configurations": {
             "production": {
-              "browserTarget": "Lab5:build:production"
+              "browserTarget": "lab7:build:production"
             },
             "development": {
-              "browserTarget": "Lab5:build:development"
+              "browserTarget": "lab7:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Lab5:build"
+            "browserTarget": "lab7:build"
           }
         },
         "test": {
@@ -108,5 +104,5 @@
       }
     }
   },
-  "defaultProject": "Lab5"
+  "defaultProject": "lab7"
 }

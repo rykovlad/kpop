@@ -1,0 +1,110 @@
+<div class="form-card">
+  <h3>Форма</h3>
+  <form>
+    <table>
+      <tr>
+        <td>ФИО:<span class="required-symbol">*</span>:</td>
+        <td><input class="text-input" (input)="formModel.fullName = getValue($event)"></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td class="error-text" id="fullname-error" *ngIf="getFullNameError()">{{getFullNameError()}}</td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+      <tr>
+        <td>Адрес:<span class="required-symbol">*</span></td>
+        <td><input class="text-input" (input)="formModel.address = getValue($event)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="error-text" id="address-error" *ngIf="getAddressError()">{{getAddressError()}}</td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+      <tr>
+        <td>Город:<span class="required-symbol">*</span>:</td>
+        <td><input class="text-input" (input)="formModel.city = getValue($event)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="error-text" id="city-error" *ngIf="getCityError()">{{getCityError()}}</td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+      <tr>
+        <td>Почтовый идекс:</td>
+        <td><input class="text-input" (input)="formModel.post_number = getValue($event)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="error-text" id="icq-error" *ngIf="getPostError()">{{getPostError()}}</td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+      <tr>
+        <td>Телефон:<span class="required-symbol">*</span></td>
+        <td><input class="text-input" (input)="formModel.number = getValue($event)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="error-text" id="icq-error" *ngIf="getPhoneError()">{{getPhoneError()}}</td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+      <tr>
+        <td>Дополнительная информация:</td>
+        <td><textarea class="text-input" (input)="formModel.info = getValue($event)"></textarea></td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+      <tr>
+        <td>E-mail:<span class="required-symbol">*</span>:</td>
+        <td><input class="text-input" (input)="formModel.email = getValue($event)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="error-text" id="email-error" *ngIf="getEmailError()">{{getEmailError()}}</td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+      <tr>
+        <td>Пароль:<span class="required-symbol">*</span>:</td>
+        <td><input class="text-input" type="password" (input)="formModel.password = getValue($event)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="error-text" id="password-error" *ngIf="getPasswordError()">{{getPasswordError()}}</td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+      <tr>
+        <td>Повторите пароль:<span class="required-symbol">*</span>:</td>
+        <td><input class="text-input" type="password" (input)="formModel.repeatedPassword = getValue($event)"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="error-text" id="repeat-password-error"
+            *ngIf="formModel.passwordIsNotEmpty() && getRepeatedPasswordError()">{{getRepeatedPasswordError()}}</td>
+      </tr>
+      <tr>
+        <div class="line"></div>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><input type = "checkbox" >Я хочу получать новости и спецпредложения Троицкой фабрики</td>
+      </tr>
+    </table>
+    <button class="submit-button" id="submit-button" [disabled]="!formModel.validate()" (click)="handleSubmit()">Продолжить</button>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+.text-input {
+  @apply appearance-none border border-gray-100 px-2 py-1 shadow-md text-blue-300
+  focus:outline-none
+}
+
+.error-text {
+  @apply px-2 text-red-500
+}
+
+.submit-button {
+  background-color: rgba(255, 0, 0, 0.747);
+  color: white;
+}
+
+.required-symbol {
+  @apply text-red-500
+}
+
+.form-card {
+  background-color: #f5f4f4;
+  width: 40%;
+}
+
+table tr * {
+  @apply py-1 px-2
+}
+
+.line  {
+ border-top: 1px dashed #000; /* Параметры линии */
+ height: 20px; /* Высота блока */
+ width: 300%;
+}
