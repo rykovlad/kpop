@@ -2,7 +2,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 export class SignUpForm {
   private nameRegex = /^[a-zA-Z_-\s]+$/;
-  private cityRegex = /^[a-zA-Z_-]+$/;
+  private cityRegex = /^[a-zA-Z_-\s]+$/;
   //private addressRegex = /^[a-zA-Z0-9_-\s]+$/;
   private emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
   private phoneRegex = /^([0-9]-?){9}[0-9]$/;
